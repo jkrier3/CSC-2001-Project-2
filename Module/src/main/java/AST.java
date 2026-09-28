@@ -1,5 +1,5 @@
 // AST
 
-inteface AST {
+interface AST {
 
 }
