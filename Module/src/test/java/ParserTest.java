@@ -8,7 +8,7 @@ class ParserTest {
 
     @Test
     void postFix(){
-        assertEquals(14.0, Parser.parsePostFix("2 3 4 + *").eval());
+        assertEquals(14.0, Parser.parsePostfix("2 3 4 + *").eval());
     }
     @Test
     void isLeft(){

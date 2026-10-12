@@ -87,7 +87,7 @@ public class Parser {
                     apply(operands, operators.pop());
                 }
                 if (operators.isEmpty()) {
-                    throw new IllegalArgumentException("mismatched closed paren");
+                    throw new IllegalArgumentException("mismatched close paren");
                 }
                 operators.pop();
             } else if (isOp(token)) {

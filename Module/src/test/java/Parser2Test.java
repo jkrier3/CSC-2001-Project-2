@@ -9,12 +9,12 @@ class Parser2Test {
 
     @Test
     void postFixAndApply(){
-        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostFix("").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostFix("hello").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostFix("+").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostFix("2 +").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostFix("2 2 2 2 +").eval());
-        assertEquals(14.0, Parser.parsePostFix("2 3 4 + *").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostfix("").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostfix("hello").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostfix("+").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostfix("2 +").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parsePostfix("2 2 2 2 +").eval());
+        assertEquals(14.0, Parser.parsePostfix("2 3 4 + *").eval());
     }
     @Test
     void isLeftAndPrec(){
@@ -31,18 +31,18 @@ class Parser2Test {
 
     @Test
     void inFix(){
-        assertThrows(IllegalArgumentException.class, () -> Parser.parseInFix("").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parseInFix("( 3 + 4 * 2").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parseInFix("3 + 4 ) * 2").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parseInFix("quinn").eval());
-        assertThrows(IllegalArgumentException.class, () -> Parser.parseInFix("3 + 3 + 3 3").eval());
-        assertEquals(14.0, Parser.parseInFix("( 3 + 4 ) * 2").eval());
-        assertEquals(11.0, Parser.parseInFix("3 + 4 * 2").eval());
-        assertEquals(5.0, Parser.parseInFix("3 + 4 - 2").eval());
-        assertEquals(19.0, Parser.parseInFix("3 + 4 ^ 2").eval());
-        assertEquals(1.0, Parser.parseInFix("3 - 4 / 2").eval());
-        assertEquals(49.0, Parser.parseInFix("( 3 + 4 ) ^ 2").eval());
-        assertEquals(10.0, Parser.parseInFix("( ( 3 + 4 ) - 2 ) * 2").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parseInfix("").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parseInfix("( 3 + 4 * 2").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parseInfix("3 + 4 ) * 2").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parseInfix("quinn").eval());
+        assertThrows(IllegalArgumentException.class, () -> Parser.parseInfix("3 + 3 + 3 3").eval());
+        assertEquals(14.0, Parser.parseInfix("( 3 + 4 ) * 2").eval());
+        assertEquals(11.0, Parser.parseInfix("3 + 4 * 2").eval());
+        assertEquals(5.0, Parser.parseInfix("3 + 4 - 2").eval());
+        assertEquals(19.0, Parser.parseInfix("3 + 4 ^ 2").eval());
+        assertEquals(1.0, Parser.parseInfix("3 - 4 / 2").eval());
+        assertEquals(49.0, Parser.parseInfix("( 3 + 4 ) ^ 2").eval());
+        assertEquals(10.0, Parser.parseInfix("( ( 3 + 4 ) - 2 ) * 2").eval());
 
 
     }
