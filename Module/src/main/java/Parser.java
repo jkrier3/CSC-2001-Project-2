@@ -30,7 +30,7 @@ public class Parser {
     }
 
 
-    static AST parsePostFix(String input) {
+    static AST parsePostfix(String input) {
         if (input.isBlank()) {
             throw new IllegalArgumentException("empty input");
         }
@@ -71,7 +71,7 @@ public class Parser {
         }
     }
 
-    public static AST parseInFix(String input) {
+    public static AST parseInfix(String input) {
         if (input.isBlank()) {
             throw new IllegalArgumentException("empty input");
         }
