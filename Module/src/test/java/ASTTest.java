@@ -22,6 +22,8 @@ class ASTTest {
         assertEquals(4.0, divide.eval());
         Binop exp = new Binop("^", new Num(2), new Num(3));
         assertEquals(8.0, exp.eval());
+        Binop exp1 = new Binop("^", new Num(2), new Num(0));
+        assertEquals(1.0, exp1.eval());
 
         AST addition = new Binop("+", new Num(2), new Num(3));
         AST multiplication = new Binop("*", addition, new Num(4));
