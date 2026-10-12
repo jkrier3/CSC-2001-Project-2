@@ -1,3 +1,6 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 // Parsers for postfix and infix expressions
 public class Parser {
     public static int precedence(String op) {
@@ -44,9 +47,6 @@ public class Parser {
             } else {
                 throw new IllegalArgumentException("invalid token");
             }
-        }
-        if (operands <= operators) {
-            throw new IllegalArgumentException("insufficient operands");
         }
         if (operators < operands - 1) {
             throw new IllegalArgumentException("too many operands");
@@ -116,15 +116,7 @@ public class Parser {
 
 
     }
-}
-
-public static void main(String[] args) {
-    System.out.println(parsePostFix("2 2 +"));
-    System.out.println(parsePostFix("2 3 4 + *").eval());
-    System.out.println(parseInFix("2 ^ 3").eval());
-    System.out.println(parseInFix("( 2 + 3 ) * 4").eval());
-    System.out.println(parseInFix("( 2 + 3 ) ^ 2").eval());
-
-
 
 }
+
+

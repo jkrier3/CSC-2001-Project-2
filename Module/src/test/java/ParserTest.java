@@ -7,12 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ParserTest {
 
     @Test
-    void prec(){
-        assertEquals(1, Parser.precedence("+"));
+    void postFix(){
+        assertEquals(14.0, Parser.parsePostFix("2 3 4 + *").eval());
     }
     @Test
     void isLeft(){
-        assertTrue(isLeftAssociative);
+        assertTrue(Parser.isLeftAssociative("+"));
     }
+
 
 }

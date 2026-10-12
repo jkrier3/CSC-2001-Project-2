@@ -2,3 +2,5 @@ Log activity here
 9/28/26 - Jackson Krier - 9:22-10:15am - ArrayStack finished with tests
 9/29/26 - Jackson Krier - 2:31-3:40pm - Parser for postfix and AST
 10/8/26 - Jackson Krier - 7:13 -9:18pm - Finished almost everything, was having issues with ParserTest
+10/9/26 - Jackson Krier - 9:24 - 9:50pm - Worked on solving issue; did not
+10/11/26 - Jackson Krier - 6:10 - 6:49pm - Fixed bug and finished all tests
